@@ -1,40 +1,71 @@
-body{
-    text-align:center;
+body {
+    text-align: center;
+    font-family: Arial, sans-serif; /* Added a font for better readability */
+    background-color: #f0f0f0; /* Light background for contrast */
 }
 
-.btn{
+h1 {
+    margin-bottom: 20px; /* Space below the title */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the instructions */
+}
+
+.btn {
     height: 200px;
     width: 200px;
     border-radius: 20%;
     border: 10px solid black;
     margin: 2.5rem;
+    font-size: 2rem; /* Increase font size for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
-.btn-container{
-    display:flex;
-    justify-content:center;
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
-.yellow{
+.yellow {
     background-color: #f99b45;
 }
 
-.red{
+.red {
     background-color: #d95980;
 }
 
-.green{
+.green {
     background-color: #819ff9;
 }
 
-.purple{
+.purple {
     background-color: #63aac0;
 }
-.flash{
-    background-color: white;
 
+.flash {
+    background-color: white; /* Flash effect color */
 }
 
-.userflash{
-    background-color: white;
+.userflash {
+    background-color: white; /* User flash effect color */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .btn {
+        height: 150px; /* Smaller buttons on mobile */
+        width: 150px; /* Smaller buttons on mobile */
+        font-size: 1.5rem; /* Smaller font size on mobile */
+    }
+}
+
+.game-over-text {
+    color: red; /* Sets the text color to red */
+    font-size: 2rem; /* Optional: Adjust font size for better visibility */
 }
