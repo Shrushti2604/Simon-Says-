@@ -87,21 +87,17 @@ let started = false;
 let level = 0;
 
 let h2 = document.querySelector("h2");
- 
-
-document.getElementById("start-btn").addEventListener("click", startGame); 
+document.getElementById("start-btn").addEventListener("click", startGame);
+document.addEventListener("keypress", startGame);
 
 function startGame() {
-  
-}
-
-document.addEventListener("keypress", function () {
-    if (started == false) {
+    if (!started) {
         console.log("Game Started");
         started = true;
         levelUp();
     }
-});
+}
+
 
 function gameFlash(btn) {
     btn.classList.add("flash");
