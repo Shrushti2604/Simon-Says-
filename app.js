@@ -7,16 +7,13 @@ let started = false;
 let level = 0;
 
 let h2 = document.querySelector("h2");
-document.getElementById("start-btn").addEventListener("click", startGame);
-document.addEventListener("keypress", startGame);
-
-function startGame() {
-    if (!started) {
+document.addEventListener("keypress", function () {
+    if (started == false) {
         console.log("Game Started");
         started = true;
         levelUp();
     }
-}
+});
 
 function gameFlash(btn) {
     btn.classList.add("flash");
@@ -72,12 +69,8 @@ function btnPress() {
 }
 
 let allBtns = document.querySelectorAll(".btn");
-for (let btn of allBtns) {
+for (let btn of allBtns) { // Corrected 'AllBtns' to 'allBtns'
     btn.addEventListener("click", btnPress);
-    btn.addEventListener("touchstart", function(event) {
-        event.preventDefault(); // Prevent default touch behavior
-        btnPress.call(this); // Call btnPress with the correct context
-    });
 }
 
 function reset() {
